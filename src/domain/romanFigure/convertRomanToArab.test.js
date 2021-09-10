@@ -72,4 +72,24 @@ describe("Testing function for converting roman value to arab value", () => {
       });
     });
   });
+
+  describe("Given that I wish to convert an array to arab value", () => {
+    describe("When I call the function convertRomanToArab with an array as args", () => {
+      it("Then it throw with 'TYPE_ERROR'", () => {
+        expect(() => {
+          convertRomanToArab([23, "SSEF"]);
+        }).toThrow("TYPE_ERROR");
+      });
+    });
+  });
+
+  describe("Given that I wish to convert a roman figure with invalid character to arab value", () => {
+    describe("When I call the function convertRomanToArab with an invalid character as args", () => {
+      it("Then it throw with 'TYPE_ERROR'", () => {
+        expect(() => {
+          convertRomanToArab("CXK");
+        }).toThrow("K is an invalid character");
+      });
+    });
+  });
 });

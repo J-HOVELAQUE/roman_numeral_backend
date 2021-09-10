@@ -1,4 +1,7 @@
 function convertRomanToArab(romanValue) {
+  if (typeof romanValue !== "string") {
+    throw new Error("TYPE_ERROR");
+  }
   const figureList = romanValue.split("");
 
   return figureList.reduce((absoluteValue, currentFigure, index) => {
@@ -66,7 +69,7 @@ function convertRomanToArab(romanValue) {
         return absoluteValue;
 
       default:
-        return absoluteValue;
+        throw new Error(`${currentFigure} is an invalid character`);
     }
   }, 0);
 }
