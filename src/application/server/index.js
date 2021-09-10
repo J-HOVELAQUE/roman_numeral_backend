@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const http = require("http");
 const createError = require("http-errors");
 const path = require("path");
+const romanRouter = require("../routers/romanRouter");
 
 function buildServer() {
   const app = express();
@@ -26,6 +27,9 @@ function buildServer() {
     );
     next();
   });
+
+  // Routers
+  app.use("/roman", romanRouter);
 
   // catch 404 and forward to error handler
   app.use(function (req, res, next) {
