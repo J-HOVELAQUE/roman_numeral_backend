@@ -1,7 +1,7 @@
 const convertRomanToArab = require("../../domain/romanFigure/convertRomanToArab");
 
 function convertController(req, res) {
-  const figureToConvert = req.query.value;
+  const figureToConvert = req.params.romanValue;
   let valueInAragFigure;
   try {
     valueInAragFigure = convertRomanToArab(figureToConvert);

@@ -1,8 +1,8 @@
 function convertRomanToArab(romanValue) {
-  const romanValueInUpperCase = romanValue.toUpperCase();
   if (typeof romanValue !== "string") {
     throw new Error("TYPE_ERROR");
   }
+  const romanValueInUpperCase = romanValue.toUpperCase();
   const figureList = romanValueInUpperCase.split("");
 
   return figureList.reduce((absoluteValue, currentFigure, index) => {
