@@ -1,0 +1,21 @@
+{
+  "name": "romannumeral_backend",
+  "version": "1.0.0",
+  "description": "An api for convert roman figure to arab figure",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Julien Hovelaque",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "joi": "^17.4.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "jest": "^27.1.1"
+  }
+}
