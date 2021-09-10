@@ -4,6 +4,9 @@ const http = require("http");
 const createError = require("http-errors");
 const path = require("path");
 const romanRouter = require("../routers/romanRouter");
+const config = require("config");
+
+const ALLOWED_ORIGIN = config.get("app.allowedOrigin");
 
 function buildServer() {
   const app = express();
