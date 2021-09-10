@@ -1,10 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const convertController = require("../controllers/convertController");
 
-router.get("/", (req, res) => {
-  res.json({
-    message: "Converting roman figure",
-  });
-});
+router.get("/", convertController);
 
 module.exports = router;
