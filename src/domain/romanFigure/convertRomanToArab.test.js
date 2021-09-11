@@ -78,7 +78,7 @@ describe("Testing function for converting roman value to arab value", () => {
       it("Then it throw with 'TYPE_ERROR'", () => {
         expect(() => {
           convertRomanToArab([23, "SSEF"]);
-        }).toThrow("TYPE_ERROR");
+        }).toThrow("23,SSEF is an invalid roman numerals");
       });
     });
   });
@@ -88,7 +88,7 @@ describe("Testing function for converting roman value to arab value", () => {
       it("Then it throw with 'TYPE_ERROR'", () => {
         expect(() => {
           convertRomanToArab("CXK");
-        }).toThrow("K is an invalid character");
+        }).toThrow("CXK is an invalid roman numerals");
       });
     });
   });

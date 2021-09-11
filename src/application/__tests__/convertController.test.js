@@ -36,7 +36,7 @@ describe("GET /roman/:romanValue", () => {
         const answer = await supertest(server).get("/roman/LXIIIs").expect(400);
 
         expect(answer.body).toEqual({
-          erreur: "S is an invalid character",
+          erreur: "LXIIIs is an invalid roman numerals",
         });
       });
     });

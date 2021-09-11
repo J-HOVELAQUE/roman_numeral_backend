@@ -1,6 +1,8 @@
+const isValidRomanNumber = require("./isValidRomanNumber");
+
 function convertRomanToArab(romanValue) {
-  if (typeof romanValue !== "string") {
-    throw new Error("TYPE_ERROR");
+  if (!isValidRomanNumber(romanValue)) {
+    throw new Error(`${romanValue} n'est pas un chiffre romain valide`);
   }
   const romanValueInUpperCase = romanValue.toUpperCase();
   const figureList = romanValueInUpperCase.split("");
